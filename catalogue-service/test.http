@@ -1,0 +1,26 @@
+### findAll
+GET http://localhost:8081/catalogue-api/products
+
+### findById
+GET http://localhost:8081/catalogue-api/products/4
+
+### create
+POST http://localhost:8081/catalogue-api/products
+Content-Type: application/json
+
+{
+  "title": "Ещё продукт",
+  "details": "Детали продукта"
+}
+
+### update
+PATCH http://localhost:8081/catalogue-api/products/4
+Content-Type: application/json
+
+{
+  "title": "Ещё продукт вам",
+  "details": "Детали продукта вам"
+}
+
+### delete
+DELETE http://localhost:8081/catalogue-api/products/4

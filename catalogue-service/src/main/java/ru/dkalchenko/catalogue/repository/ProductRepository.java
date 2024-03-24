@@ -1,6 +1,6 @@
-package ru.dkalchenko.manager.repository;
+package ru.dkalchenko.catalogue.repository;
 
-import ru.dkalchenko.manager.model.Product;
+import ru.dkalchenko.catalogue.model.Product;
 
 import java.util.List;
 import java.util.Optional;

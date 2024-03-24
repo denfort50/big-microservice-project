@@ -1,7 +1,7 @@
-package ru.dkalchenko.manager.service;
+package ru.dkalchenko.catalogue.service;
 
-import ru.dkalchenko.manager.dto.ProductDto;
-import ru.dkalchenko.manager.model.Product;
+import ru.dkalchenko.catalogue.dto.ProductDto;
+import ru.dkalchenko.catalogue.model.Product;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public interface ProductService {
 
     Optional<Product> findProduct(Integer productId);
 
-    void updateProduct(Integer id, ProductDto payload);
+    void updateProduct(Integer id, String title, String details);
 
     void deleteProduct(Integer id);
 }

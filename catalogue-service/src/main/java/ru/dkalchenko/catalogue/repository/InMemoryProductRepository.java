@@ -1,8 +1,8 @@
-package ru.dkalchenko.manager.repository;
+package ru.dkalchenko.catalogue.repository;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-import ru.dkalchenko.manager.model.Product;
+import ru.dkalchenko.catalogue.model.Product;
 
 import java.util.*;
 
