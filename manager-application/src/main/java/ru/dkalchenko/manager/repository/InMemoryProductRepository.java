@@ -4,10 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import ru.dkalchenko.manager.model.Product;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Slf4j
 @Repository
@@ -36,5 +33,17 @@ public class InMemoryProductRepository implements ProductRepository {
         products.add(product);
         log.info("Продукт с id %d сохранён в память".formatted(product.getId()));
         return product;
+    }
+
+    @Override
+    public Optional<Product> findById(Integer productId) {
+        return products.stream()
+                .filter(product -> Objects.equals(productId, product.getId()))
+                .findFirst();
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        products.removeIf(product -> Objects.equals(id, product.getId()));
     }
 }

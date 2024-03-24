@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: manager-application
+server:
+  port: 8080
