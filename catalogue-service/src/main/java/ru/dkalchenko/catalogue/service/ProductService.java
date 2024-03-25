@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ProductService {
 
-    Iterable<Product> findAll();
+    Iterable<Product> findAllProducts(String filter);
 
     Product createProduct(ProductDto request);
 

@@ -11,7 +11,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(schema = "catalogue", name = "tables")
+@Table(schema = "catalogue", name = "products")
+@NamedQueries(
+        @NamedQuery(name = "Product.findAllByTitleLikeIgnoreCase",
+                query = "select p from Product p where p.title ilike :filter"
+        )
+)
 public class Product {
 
     @Id

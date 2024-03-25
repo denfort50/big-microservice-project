@@ -1,6 +1,9 @@
 ### findAll
 GET http://localhost:8081/catalogue-api/products
 
+### findAllByTitle
+GET http://localhost:8081/catalogue-api/products?filter=%25второй%25
+
 ### findById
 GET http://localhost:8081/catalogue-api/products/4
 

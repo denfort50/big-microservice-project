@@ -26,10 +26,10 @@ public class DefaultProductService implements ProductService {
     private final RestClient restClient;
 
     @Override
-    public List<Product> findAll() {
+    public List<Product> findAll(String filter) {
         return restClient
                 .get()
-                .uri("/catalogue-api/products")
+                .uri("/catalogue-api/products?filter={filter}", filter)
                 .retrieve()
                 .body(PRODUCTS_TYPE_REFERENCE);
     }
