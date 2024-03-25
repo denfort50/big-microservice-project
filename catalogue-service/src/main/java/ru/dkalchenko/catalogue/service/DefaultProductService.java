@@ -6,7 +6,6 @@ import ru.dkalchenko.catalogue.dto.ProductDto;
 import ru.dkalchenko.catalogue.model.Product;
 import ru.dkalchenko.catalogue.repository.ProductRepository;
 
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -17,7 +16,7 @@ public class DefaultProductService implements ProductService {
     private final ProductRepository productRepository;
 
     @Override
-    public List<Product> findAll() {
+    public Iterable<Product> findAll() {
         return productRepository.findAll();
     }
 

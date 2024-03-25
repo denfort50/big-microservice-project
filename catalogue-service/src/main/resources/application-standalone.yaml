@@ -1,6 +1,15 @@
 spring:
   application:
     name: catalogue-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/catalogue
+    username: postgres
+    password: password
+  flyway:
+    schemas:
+      - public
+      - catalogue
 
 server:
   port: 8081
