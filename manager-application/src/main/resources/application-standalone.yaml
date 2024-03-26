@@ -1,7 +1,13 @@
 spring:
   application:
     name: manager-application
-
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/user_management
+    username: postgres
+    password: password
+  jpa:
+    open-in-view: true
 server:
   port: 8080
 
