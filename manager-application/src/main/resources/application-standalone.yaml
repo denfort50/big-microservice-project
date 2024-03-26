@@ -8,3 +8,5 @@ server:
 catalogue:
   service:
     url: http://localhost:8081
+    username: catalogue_user
+    password: password

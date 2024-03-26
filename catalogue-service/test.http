@@ -1,5 +1,6 @@
 ### findAll
 GET http://localhost:8081/catalogue-api/products
+Authorization: Basic Y2F0YWxvZ3VlX3VzZXI6cGFzc3dvcmQ=
 
 ### findAllByTitle
 GET http://localhost:8081/catalogue-api/products?filter=%25второй%25
