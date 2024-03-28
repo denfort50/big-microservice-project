@@ -1,23 +1,26 @@
 spring:
   application:
     name: catalogue-service
-  security:
-    user:
-      name: catalogue_user
-      password: '{noop}password'
-      roles:
-        - SERVICE
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/catalogue
     username: postgres
     password: password
+
   flyway:
     schemas:
       - public
       - catalogue
   jpa:
     show-sql: true
+    open-in-view: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8082/realms/big-microservice-project
 
 server:
   port: 8081

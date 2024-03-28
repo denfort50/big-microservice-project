@@ -8,3 +8,4 @@ log/
 target/
 /manager-application/target/
 /catalogue-service/target/
+/config/

@@ -8,11 +8,27 @@ spring:
     password: password
   jpa:
     open-in-view: true
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8082/realms/big-microservice-project
+            user-name-attribute: preferred_username
+        registration:
+          keycloak:
+            client-id: manager-application
+            client-secret: xXssiEIVy4NxPkEstyHTbXlBJeYUHzvO
+            scope:
+              - openid
+              - view_catalogue
+              - edit_catalogue
+              - microprofile-jwt
+
 server:
   port: 8080
 
 catalogue:
   service:
     url: http://localhost:8081
-    username: catalogue_user
-    password: password
+    registration-id: keycloak
