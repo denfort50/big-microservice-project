@@ -4,3 +4,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/user_management
     username: postgres
     password: password
+
+catalogue:
+  service:
+    url: http://localhost:54321

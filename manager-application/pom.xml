@@ -71,6 +71,12 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.wiremock</groupId>
+			<artifactId>wiremock-standalone</artifactId>
+			<version>3.3.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -87,6 +93,7 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<classifier>exec</classifier>
 				</configuration>
 				<executions>
 					<execution>
